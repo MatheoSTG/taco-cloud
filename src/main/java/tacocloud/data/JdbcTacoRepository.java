@@ -16,7 +16,7 @@ import java.util.Arrays;
 import java.util.Date;
 
 @Repository
-public class JdbcTacoRepository implements TacoRepository{
+public class JdbcTacoRepository implements JdbcTacoRepoInterface{
     private JdbcTemplate jdbc;
 
     @Autowired

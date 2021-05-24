@@ -10,6 +10,7 @@ import tacocloud.Ingredient;
 import tacocloud.Ingredient.Type;
 import tacocloud.Order;
 import tacocloud.Taco;
+import tacocloud.data.IngredientRepository;
 import tacocloud.data.JdbcIngredientRepository;
 import tacocloud.data.TacoRepository;
 
@@ -34,11 +35,11 @@ public class DesignTacoController {
         return new Taco();
     }
 
-    private final JdbcIngredientRepository ingredientRepository;
+    private final IngredientRepository ingredientRepository;
     private TacoRepository tacoRepository;
 
     @Autowired
-    public DesignTacoController(JdbcIngredientRepository ingredientRepository, TacoRepository tacoRepository) {
+    public DesignTacoController(IngredientRepository ingredientRepository, TacoRepository tacoRepository) {
         this.ingredientRepository = ingredientRepository;
         this.tacoRepository = tacoRepository;
     }
